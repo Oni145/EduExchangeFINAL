@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verify</title>
+    <link rel="stylesheet" href="../html/css/emailverify.css">
+</head>
+<body>
+    <div class="main">
+        <div class="div-1">
+            <div class="div-2">
+                <img src="../Assets/email.png" alt="" width="70px">
+                <h5>Please Verify Your Email</h5>
+                <p id="para">You're almost there, we sent an email to <span id="emailid"></span></p>
+                <p>Just click on the link in the email to complete your signup. If you don't see the email, <span id="bold">check your inbox</span></p>
+            </div>
+            <p id="message"></p>
+            <div class="buttons">
+                <button class="button" onClick="resend()">Resend</button>
+                <button class="button" onClick="reloud()">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src ="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src ="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    
+  <script src="../js/firebase.js"></script>
+    <script src="../js/emailverify.js"></script>
+</body>
+</html>

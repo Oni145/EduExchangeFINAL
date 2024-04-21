@@ -1,0 +1,142 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+  }
+  
+
+
+  .maincreate {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%;
+    height: 300px;
+    margin-bottom: 50px;
+    margin: auto;
+    margin-top: 240px;
+    border: 3px solid #382769;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+
+  textarea {
+    outline: none;
+    border: 1px solid #382769 !important;
+  }
+  .maincreate {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  #container {
+    align-items: flex-start;
+  }
+ 
+  .container {
+    padding: 0px;
+  }
+  #uploadedmssage {
+    display: none;
+  }
+  .createposttitle {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  #postdata {
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    padding: 7px; 
+    border: 1px solid #382769;
+  }
+  #imagesforpost {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 12px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    color: gray;
+  }
+  #uploadbuttonicon {
+    width: 25px;
+  }
+  #submitbuttondiv {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  #createpostbtn {
+    width: 180px;
+    padding: 5px 0px;
+    border: none;
+    background-color: #382769;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: white;
+    margin-top: -25 px;
+  }
+  .createpostbtn {
+    width: 180px;
+    padding: 10px 0px;
+    border: none;
+    background-color: #382769;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: white;
+  }
+  #postfiles {
+    display: none;
+  }
+  
+  #textareaupdate {
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    padding: 7px;
+    border: 2px solid rgb(225, 221, 221) !important;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  #textarea {
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    padding: 7px;
+    border: 2px solid rgb(225, 221, 221) !important;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 0px !important;
+  }
+  @media only screen and (max-width: 310px) {
+    #imagesforpost {
+      font-size: 4vw;
+    }
+    #uploadbuttonicon {
+      width: 15px;
+    }
+  }
+
+  
+  .searchbar i {
+    margin-left: 5px;
+  }
+  

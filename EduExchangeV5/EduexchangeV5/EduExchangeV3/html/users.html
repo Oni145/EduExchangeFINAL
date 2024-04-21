@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Userspage</title>
+    <link rel="stylesheet" href="../html/css/nav.css" />
+    <link rel="stylesheet" href=".css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-storage.js"></script>
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <div class="sidebar"><box-icon name=''></box-icon>
+      <div class="logo-details">
+        <i class="bx bxl-book-content"></i>
+        <div class="logo_name">EduExchange</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <i class="bx bx-search"></i>
+
+          <input type="text" id="searchInput" placeholder="Search..."  />
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <a href="../html/homepage.html">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Homepage</span>
+          </a>
+          <span class="tooltip">Homepage</span>
+        </li>
+        <li>
+          <a href="../html/profile.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Profile</span>
+          </a>
+          <span class="tooltip">Profile</span>
+        </li>
+        <li>
+          <a href="../html/users.html">
+            <i class="bx bx-group"></i>
+            <span class="links_name">Users</span>
+          </a>
+          <span class="tooltip">Users</span>
+        </li>
+        <li>
+          <a href="../html/createpost.html">
+            <i class="bx bx-plus"></i>
+            <span class="links_name">Createpost</span>
+          </a>
+          <span class="tooltip">Createpost</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t1.15752-9/394691243_1596152717581806_1133558258109293106_n.png?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=RCoMctQmknYAb7jTYco&_nc_ht=scontent.fmnl17-5.fna&oh=03_AdVaFg07ywtN7Ect4cKoWddWkcPZImYEjkpd-Zgo5t0AwA&oe=6641A963" alt="profileImg"  />
+           
+            <div class = "usernameElement"></div>
+            <div class="name_job">
+              <div class="name" id= "user">Username</div>
+              <div class="job">EduExchange User </div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="text">USERS</div>
+      </section>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/userdetail.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../html/css/login.css">
+  <title>EduExchange Login page</title>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="login-form">
+        <h1>Account Login</h1>
+        <p class="login-message">Please login to continue with your account.</p>
+        <p id="message"> </p>
+        <form id="form">  
+          <input type="text" placeholder="Email" id="Username">
+          <input type="password" placeholder="Password" id="Password">
+          <div class="div-6">
+              <span id="signup" onClick="sign()" class="register-link">Don't have an account?</span>
+              <span id="forgotPassword" class="forgot-password" onClick="ForgetPassword()">Forgot password?</span> 
+            </div>
+          <button type="button" class="button" onClick="login()">Login</button>
+      </form>
+      
+        <div style="position: relative; text-align: center">
+          <p style="position: center; bottom: 50; width:100%;"> ©2024 All Rights Reserved. CyberKoptics</p>
+        </div>
+      </div>
+    </div>
+    <img src="../Assets/Singlev2.png" alt="my image" class="right-image">
+  </div>
+  <div class="container2">
+    <div class="content2">
+      <h2>EduExchange</h2>
+    </div>
+  </div>
+  <script src="../js/firebase.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>
