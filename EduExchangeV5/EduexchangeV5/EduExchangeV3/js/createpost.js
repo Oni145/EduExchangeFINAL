@@ -28,7 +28,6 @@ firebase.auth().onAuthStateChanged((user) => {
                 createpostinput.setAttribute(
                   "placeholder",
                   `${" " + userDataObj.Username}` );
-                // Update the username and profile picture in the profile details
                 document.querySelector('.profile .name').textContent = userDataObj.Username;
                 console.log("Profile picture URL:", userDataObj.ProfilePicture);
                 document.querySelector('.profile-details img').src = userDataObj.ProfilePicture;
@@ -42,6 +41,7 @@ firebase.auth().onAuthStateChanged((user) => {
       window.location.assign("../html/login.html");
     }
   });
+  
   firebase.auth().onAuthStateChanged((user) => {
     currentUser = user;
 });
@@ -114,6 +114,13 @@ function createPost() {
         console.log("PostValue and URL cannot be empty");
     }
 };
+
+const log_out = () => {
+  firebase.auth().signOut().then(() => {
+    window.location.assign("./login.js")
+  })
+}
+
 
 
   

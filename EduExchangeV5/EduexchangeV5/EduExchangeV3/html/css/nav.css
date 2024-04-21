@@ -5,7 +5,22 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
+  background-image: url('../assets/bg.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .sidebar{
   position: fixed;
   left: 0;
@@ -223,15 +238,23 @@
   width: 50px;
   background: none;
 }
-.home-section{
+.home-section {
   position: relative;
-  background: #ffffff;
+  background-image: url('./bg.jpg');
+  background-attachment: fixed; 
   min-height: 100vh;
   top: 0;
   left: 78px;
   width: calc(100% - 78px);
   transition: all 0.5s ease;
   z-index: 2;
+  animation: fadeIn 0.5s ease forwards; 
+}
+
+/* Adjust the position when the sidebar is open */
+.sidebar.open ~ .home-section {
+  left: 250px;
+  width: calc(100% - 250px);
 }
 
 .sidebar.open ~ .home-section{
@@ -240,7 +263,7 @@
 }
 .home-section .text{
   display: inline-block;
-  color: #382769;
+  color: #fff;
   font-size: 25px;
   font-weight: 500;
   margin: 18px

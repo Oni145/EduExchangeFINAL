@@ -7,10 +7,31 @@
   }
 }
 
+.postmain {
+  border: 3px solid #382769;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 20px;
+  margin-left: 550px;
+  box-shadow: 2px 2px 3px #382769;
+  background-color: white;
+  word-wrap: break-word;
+}
+
+/* Add the fadeIn animation class */
+.fadeIn {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
 }
 
 #loaderdiv {
@@ -71,6 +92,8 @@
   margin-left: 550px;
   box-shadow: 2px 2px 3px #382769;
   animation: fadeIn 0.5s ease forwards;
+  background-color: white;
+
 }
 
 .postheader {
@@ -168,7 +191,7 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  overflow: auto;
+  word-wrap: break-word;
 }
 
 .commentinput {

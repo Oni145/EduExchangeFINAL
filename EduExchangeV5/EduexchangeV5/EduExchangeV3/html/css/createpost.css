@@ -28,11 +28,15 @@
 }
 
 
+textarea {
+  outline: none;
+  border: 1px solid #382769 !important;
+  resize: none; 
+  overflow: auto; 
+}
 
-  textarea {
-    outline: none;
-    border: 1px solid #382769 !important;
-  }
+
+
   .maincreate {
     padding: 20px;
     border-radius: 10px;

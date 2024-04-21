@@ -1,0 +1,41 @@
+
+  .text-middle {
+    position: absolute;
+    top: 10%; /* Position at 50% from the top */
+    left: 50%; /* Position at 50% from the left */
+    transform: translate(-50%, -50%); /* Move the element back by 50% of its own width and height */
+    color: #ffff; 
+    font-size: 50px; 
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+
+  }
+  
+  .text-below {
+    position: absolute;
+    align-items: middle;
+    top: 15%; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffff;
+    font-size: 50px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+  .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  

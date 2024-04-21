@@ -26,7 +26,6 @@ firebase.auth().onAuthStateChanged((user) => {
                                 "placeholder",
                                 `${" " + userDataObj.Username}`
                             );
-                            // Update the username and profile picture in the profile details
                             document.querySelector('.profile .name').textContent = userDataObj.Username;
                             console.log("Profile picture URL:", userDataObj.ProfilePicture);
                             document.querySelector('.profile-details img').src = userDataObj.ProfilePicture;
@@ -36,6 +35,38 @@ firebase.auth().onAuthStateChanged((user) => {
         }
     }
 });
+
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        if (user.emailVerified) {
+            uid = user.uid;
+            console.log("emailVerified true");
+            var createpostinput = document.getElementById("user");
+            var usernameElement = document.querySelector('.username');
+            firebase
+                .firestore()
+                .collection("users")
+                .onSnapshot((result) => {
+                    result.forEach((userData) => {
+                        const userDataObj = userData.data();
+                        console.log("userData:", userDataObj);
+                        alluser.push(userDataObj);
+                        if (userDataObj.uid === user.uid) {
+                            createpostinput.setAttribute(
+                                "placeholder",
+                                `${" " + userDataObj.Username}`
+                            );
+                            // Update the username in the HTML
+                            usernameElement.textContent = userDataObj.Username;
+                            console.log("Profile picture URL:", userDataObj.ProfilePicture);
+                            document.querySelector('.profile-details img').src = userDataObj.ProfilePicture;
+                        }
+                    });
+                });
+        }
+    }
+});
+
 
 let fileType = "";
 let uid = "";
@@ -134,6 +165,13 @@ firebase.auth().onAuthStateChanged((user) => {
         window.location.assign("../html/login.html");
     }
 });
+
+const log_out = () => {
+    firebase.auth().signOut().then(() => {
+      window.location.assign("./login.js")
+    })
+  }
+  
 
 
 
